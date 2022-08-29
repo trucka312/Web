@@ -1,0 +1,48 @@
+:root {
+    --white-color:#FFF;
+    --black-color:#000;
+    --text-color:#333;
+    --background-color:#f5f5f5;
+    --primary-color:#EE4D2D;
+    --border-color:#dbdbdb;
+    --header-height:120px;
+    --navbar-height:34px;
+    --header-footer:28px;
+    --header-seach-height: calc(var(--header-height) - var(--navbar-height)var(--header-footer));
+    --banner-header-height:224px;
+    --banner-height:360px;
+
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html {
+    font-size:62.5%;
+    line-height: 1.6rem;
+    font-family: Helvetica;
+    box-sizing: border-box;  
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    min-width:500px;
+    margin: 0 auto;
+}
+
+.body{
+    padding: 0;
+    margin: 0;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+ 

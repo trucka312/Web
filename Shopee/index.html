@@ -27,7 +27,7 @@
 
                 <div class="header__header">
                     <nav class="header__navbar">
-                        <ul class="header__navbar-list">
+                        <ul class="header__navbar-list ul2">
                             <li class="header__navbar-item">Kênh người bán Shopee</li>
                             <li class="header__navbar-item header__navbar-item--separate">Trở thành người bán</li>
                             <li class="header__navbar-item header__navbar-item--hasqr header__navbar-item--separate">
@@ -182,7 +182,22 @@
                         
                         <div class="header__seaching">
                             <div class="header__seach">
-                                <input type="text" class="header__seach-input" placeholder=" Đăng kí và nhận voucher bạn mới đến 70k!">
+                                <input type="text" class="header__seach-input" id="search" placeholder=" Đăng kí và nhận voucher bạn mới đến 70k!">
+                                <div class="header__seach-history">
+                                    <h4 style="padding:0.4rem 0.4rem ; color: #9b9b9b;">Nhập gì đó để tìm kiếm</h4>
+                                    <ul class="header__seach-history--list list-data">
+                                        <li class="header__seach-history--item">
+                                            <a href="#" class="header__seach-history--link">
+                                                Áo croptop
+                                            </a>
+                                        </li>
+                                        <li class="header__seach-history--item">
+                                            <a href="#" class="header__seach-history--link">
+                                                Giày Nike
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <button class="header__seach-btn">
                                     <svg height="19" viewBox="0 0 19 19" width="19" class="header__seach-btn--icon"><g fill-rule="evenodd" fill="#fff" stroke="none" stroke-width="1"><g transform="translate(-1016 -32)"><g><g transform="translate(405 21)"><g transform="translate(611 11)"><path d="m8 16c4.418278 0 8-3.581722 8-8s-3.581722-8-8-8-8 3.581722-8 8 3.581722 8 8 8zm0-2c-3.3137085 0-6-2.6862915-6-6s2.6862915-6 6-6 6 2.6862915 6 6-2.6862915 6-6 6z"></path><path d="m12.2972351 13.7114222 4.9799555 4.919354c.3929077.3881263 1.0260608.3842503 1.4141871-.0086574.3881263-.3929076.3842503-1.0260607-.0086574-1.414187l-4.9799554-4.919354c-.3929077-.3881263-1.0260608-.3842503-1.4141871.0086573-.3881263.3929077-.3842503 1.0260608.0086573 1.4141871z"></path></g></g></g></g></g></svg>
                                     
@@ -190,7 +205,7 @@
                             </div>
 
                             <!-- sản phẩm -->
-                            <!-- <div class="header__product">
+                            <div class="header__product">
                                 <ul class="header__product-list">
                                     <a href="" class="header__product-link"> <li class="header__product-item"">Dép
                                     </li></a>
@@ -209,19 +224,27 @@
                                     <a href="" class="header__product-link"> <li class="header__product-item">Áo Khoác
                                     </li></a>
                                 </ul>
-                            </div> -->
+                            </div>
                         </div>
 
         
                         <!-- Giỏ hàng -->
                         <div class="header__cart">
-                            <a href="./cart.html" class="header__cart-link">
-                                <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
-                                <div class="cart__container">
-                                    <img src="./assets/img/best__seaching/cart1.png" alt="" class="cart__container-img">
-                                    <p class="cart__container-text">Chưa Có Sản Phẩm</p>
-                                </div>
-                            </a>
+                            <div id="cartid">
+                                <!-- <a href="./cart.html" class="header__cart-link"> -->
+                                    <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                                    <div class="cart__container" id="cart-list">
+                                       
+                                        <img src="./assets/img/best__seaching/cart1.png" alt="" class="cart__container-img">
+                                        <p class="cart__container-text">Chưa Có Sản Phẩm</p>
+                                    </div>
+                                    
+                                <!-- </a> -->
+                            </div>
+                            <div>
+                                <svg id="account" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="JClLZ0"><path d="M10.8166 17.0039531c-1.5729-1.03425-2.6166-2.8161-2.6166-4.82895v-2.1c0-3.17625 2.5977-5.775 5.775-5.775 3.17625 0 5.775 2.59875 5.775 5.775v2.1c0 2.016-1.04685 3.801-2.625 4.8342v-.0042l6.18975 2.667c.3864.1659.63525.546.63525.9639v2.5641c0 .5775-.4725 1.05-1.05 1.05H5.05c-.5775 0-1.05-.4725-1.05-1.05v-2.5641c0-.4179.24885-.798.6342-.9639l6.1908-2.667-.0084-.00105z" stroke="#FFF" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linejoin="round"></path></svg>
+                            </div>
+                           
                         </div>
                     </div>    
                     
@@ -554,7 +577,7 @@
                     <div class="product__sale">
                         <div class="sale__list">
                             
-                            <div class="container">
+                            <div class="container" id="flash-sale">
                                 <div class="row">
                                     <div class="col sale__item">
                                         <img src="./assets/img/product-sale/nen.png" class="sale__item_bg" alt="">
@@ -588,7 +611,7 @@
                                             <span class="sale__price-logo">₫</span>
                                         </div>
                                     </div>
-                                    <div class="col sale__item">
+                                    <div id="flash-end" class="col sale__item">
                                         <img src="./assets/img/product-sale/nen.png" class="sale__item_bg" alt="">
                                         <img src="./assets/img/product-sale/6.jfif" alt="" class="sale__item-img">
                                         <div class="sale__item-price">
@@ -596,7 +619,7 @@
                                             <span class="sale__price-logo">₫</span>
                                         </div>
                                     </div>
-                                    <div class="col sale__item">
+                                    <div id="flash-end" class="col sale__item">
                                         <img src="./assets/img/product-sale/nen.png" class="sale__item_bg" alt="">
                                         <img src="./assets/img/product-sale/6.png" alt="" class="sale__item-img">
                                         <div class="sale__item-price">
@@ -917,155 +940,183 @@
                             <a href="./details__product1.html" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen1.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/1.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
-                                    Giày thể thao NIKE
+                                        Giày thể thao NIKE
                                     </div>
-                                    <div class="recommend__item-salee">
-                                        <svg class="_2DRZW _2xFcL" fill="black" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
-                                        <p>10%Giảm</p>
-                                        <svg class="_2DRZW _2xFcL" fill="red" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                    <div style="display: flex;">
+                                        <div class="recommend__item-salee">
+                                            <svg class="_2DRZW _2xFcL" fill="black" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
+                                            <p>10%Giảm</p>
+                                            <svg class="_2DRZW _2xFcL" fill="red" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                        </div>
+                                        <div id="buynow2">+</div>
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            999.999
+                                            <span class="recommend-price-logo"> 999.999 đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán     150
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                                <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen2.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/2.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép nữ 
                                     </div>
-                                    <div class="recommend__item-salee">
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
-                                        <p>16%Giảm</p>
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                    <div style="display: flex;">
+
+                                        <div class="recommend__item-salee">
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
+                                            <p>16%Giảm</p>
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16">
+                                            <path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                        </div>
+                                        <div id="buynow2">+</div>
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            199.999
+                                            <span class="recommend-price-logo">  199.999 đ</span>
+                                           
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 750
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                                <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                             
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen3.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/3.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Gấu bông con heo
                                     </div>
-                                    <div class="recommend__item-salee">
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
-                                        <p>5%Giảm</p>
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                    <div style="display: flex;">
+
+                                        <div class="recommend__item-salee">
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
+                                            <p>5%Giảm</p>
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                        </div>
+                                        <div id="buynow2">+</div>
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo"> 99.999 đ</span>
+                                           
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 1535
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                                <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                             
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen4.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/4.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Bờm tóc
                                     </div>
-                                    <div class="recommend__item-salee">
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
-                                        <p>7%Giảm</p>
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                    <div style="display: flex;">
+
+                                        <div class="recommend__item-salee">
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
+                                            <p>7%Giảm</p>
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                        </div>
+                                        <div id="buynow2">+</div>
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            9.999
+                                            <span class="recommend-price-logo"> 9.999 đ</span>
+                                           
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 199
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                                <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                            
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen5.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/5.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         BIM BIM các loại
                                     </div>
-                                    <div class="recommend__item-salee">
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
-                                        <p>12%Giảm</p>
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                    <div style="display: flex;">
+
+                                        <div class="recommend__item-salee">
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
+                                            <p>12%Giảm</p>
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                        </div>
+                                        <div id="buynow2">+</div>
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            4.999
+                                            <span class="recommend-price-logo">4.999 đ</span>
+                                            
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 132
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                                <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                             
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen6.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/6.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Đệm cao cấp REVi
                                     </div>
-                                    <div class="recommend__item-salee">
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
-                                        <p>15%Giảm</p>
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                    <div style="display: flex;">
+                                        <div class="recommend__item-salee">
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
+                                            <p>15%Giảm</p>
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                        </div>
+                                        <div id="buynow2">+</div>
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            699.999
+                                            <span class="recommend-price-logo"> 699.999 đ</span>
+                                           
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 888
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                                <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                             
                         </div>
                     </div>
@@ -1076,156 +1127,181 @@
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen1.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/7.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                     Áo phông hàng hiệu HEDASY
                                     </div>
-                                    <div class="recommend__item-salee">
-                                        <svg class="_2DRZW _2xFcL" fill="black" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
-                                        <p>10%Giảm</p>
-                                        <svg class="_2DRZW _2xFcL" fill="red" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                    <div style="display: flex;">
+                                        <div class="recommend__item-salee">
+                                            <svg class="_2DRZW _2xFcL" fill="black" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
+                                            <p>10%Giảm</p>
+                                            <svg class="_2DRZW _2xFcL" fill="red" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                        </div>
+                                        <div id="buynow2">+</div>
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            999.999
+                                            <span class="recommend-price-logo"> 999.999 đ</span>
+                                           
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán     150
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                                <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
+                                
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen2.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/8.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép cá mập cute phô mai que 
                                     </div>
-                                    <div class="recommend__item-salee">
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
-                                        <p>16%Giảm</p>
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                    <div style="display: flex;">
+                                        <div class="recommend__item-salee">
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
+                                            <p>16%Giảm</p>
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                        </div>
+                                        <div id="buynow2">+</div>
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            199.999
+                                            <span class="recommend-price-logo"> 199.999 đ</span>
+                                            
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 750
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                                <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
+                                
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen3.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/9.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         IP 11 Pro Max phiên bản VN_A
                                     </div>
-                                    <div class="recommend__item-salee">
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
-                                        <p>5%Giảm</p>
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                    <div style="display: flex;">
+                                        <div class="recommend__item-salee">
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
+                                            <p>5%Giảm</p>
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                        </div>
+                                        <div id="buynow2">+</div>
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            9.999.9999
+                                            <span class="recommend-price-logo">9.999.9999 đ</span>
+                                            
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 1535
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                                <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
+                                
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen4.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/10.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Váy Hòng Duyên Dáng
                                     </div>
-                                    <div class="recommend__item-salee">
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
-                                        <p>7%Giảm</p>
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                    <div style="display: flex;">
+                                        <div class="recommend__item-salee">
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
+                                            <p>7%Giảm</p>
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                        </div>
+                                        <div id="buynow2">+</div>
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            999.999
+                                            <span class="recommend-price-logo"> 999.999 đ</span>
+                                           
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 199
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                                <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
+                                
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen5.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/11.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Móc treo quần áo thông minh
                                     </div>
-                                    <div class="recommend__item-salee">
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
-                                        <p>12%Giảm</p>
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                    <div style="display: flex;">
+                                        <div class="recommend__item-salee">
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
+                                            <p>12%Giảm</p>
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                        </div>
+                                        <div id="buynow2">+</div>
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            4.999
+                                            <span class="recommend-price-logo">4.999 đ</span>
+                                            
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 132
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                                <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
+                                
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen6.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/12.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép crop
                                     </div>
-                                    <div class="recommend__item-salee">
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
-                                        <p>15%Giảm</p>
-                                        <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                    <div style="display: flex;">
+                                        <div class="recommend__item-salee">
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="" stroke="currentColor" fill="#f69113"></path></svg>
+                                            <p>15%Giảm</p>
+                                            <svg class="_2DRZW _2xFcL" fill="yellow" class="recommend__item-salee--logo" viewBox="-0.5 -0.5 4 16"><path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="currentColor" fill="#f69113"></path></svg>
+                                        </div>
+                                        <div id="buynow2">+</div>
                                     </div>
+                                    
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo">99.999 đ</span>
+                                            
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 888
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                                <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                            
                         </div>
                     </div>
@@ -1236,6 +1312,7 @@
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen1.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/13.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                     Kiếm phát sáng cháy phố
@@ -1247,21 +1324,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo">   99.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán     150
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen2.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/14.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Móc treo chìa khóa đôi
@@ -1273,21 +1349,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            19.999
+                                            <span class="recommend-price-logo">   19.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 750
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen3.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/15.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Mũ lưỡi trai
@@ -1299,21 +1374,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            19.999
+                                            <span class="recommend-price-logo">   19.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 1535
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen4.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/16.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép nữ con thỏ
@@ -1325,21 +1399,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            39.999
+                                            <span class="recommend-price-logo">   39.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 199
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen5.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/17.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         combo sản phẩm pont dưỡng trắng
@@ -1351,21 +1424,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            4.999.999
+                                            <span class="recommend-price-logo">   4.999.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 132
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen6.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/18.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Giày NIKE phiên bản limited
@@ -1377,16 +1449,14 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            699.999
+                                            <span class="recommend-price-logo">   699.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 888
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
@@ -1396,6 +1466,7 @@
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen1.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/19.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                     Mũ LA đen trắng
@@ -1407,21 +1478,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo">   99.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán     170
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen2.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/20.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép croptop xanh lá cây
@@ -1433,21 +1503,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            199.999
+                                            <span class="recommend-price-logo">   199.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 754
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen3.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/21.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Túi đeo chống trộm
@@ -1459,21 +1528,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo">   99.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 1534
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen4.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/22.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Vòng tay gỗ
@@ -1485,21 +1553,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            29.999
+                                            <span class="recommend-price-logo">   29.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 99
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen5.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/23.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Combo đồ ngủ cao cấp
@@ -1511,21 +1578,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            49.999
+                                            <span class="recommend-price-logo">   49.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 1324
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen6.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/24.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép nữ đơn giản
@@ -1537,16 +1603,14 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo">   99.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 86
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
@@ -1556,6 +1620,7 @@
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen1.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/25.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                        Giày thể thao trắng
@@ -1567,21 +1632,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            799.999
+                                            <span class="recommend-price-logo">   799.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán     950
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                          
+                           <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen2.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/26.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Tất nữ ngắn
@@ -1593,21 +1657,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            9.999
+                                            <span class="recommend-price-logo"    9.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 56
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                          
+                           <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen3.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/27.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép croptop
@@ -1619,21 +1682,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo">   99.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 535
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                          
+                           <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen4.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/28.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép lê đen
@@ -1645,21 +1707,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            29.999
+                                            <span class="recommend-price-logo">   29.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 159
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen5.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/29.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Tiểu cường :>
@@ -1671,21 +1732,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            4.999
+                                            <span class="recommend-price-logo"    4.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 1525
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen6.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/30.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Kem tẩy lông
@@ -1697,16 +1757,14 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            899.999
+                                            <span class="recommend-price-logo">   899.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 882
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
@@ -1716,6 +1774,7 @@
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen1.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/31.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                     Mũ lưỡi trai nam cao cấp
@@ -1727,21 +1786,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo">   99.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán     190
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen2.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/32.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép nữ 
@@ -1753,21 +1811,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo">   99.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 751
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen3.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/33.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Áo phông nam 4 mùa
@@ -1779,21 +1836,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo">   99.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 1338
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen4.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/34.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép
@@ -1805,21 +1861,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            79.999
+                                            <span class="recommend-price-logo">   79.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 208
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen5.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/35.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Đồ ăn vặt 
@@ -1831,21 +1886,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            4.999
+                                            <span class="recommend-price-logo"    4.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 139
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen6.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/36.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép đôn chề
@@ -1857,16 +1911,14 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            69.999
+                                            <span class="recommend-price-logo">   69.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 82
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                          
+                           <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
@@ -1876,6 +1928,7 @@
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen1.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/37.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                        Áo thun phong cách tàu khựa
@@ -1887,21 +1940,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo">   99.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán     50
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen2.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/38.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép nữ 
@@ -1913,21 +1965,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            199.999
+                                            <span class="recommend-price-logo">   199.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 750
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen3.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/39.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Đòng hồ thông minh 
@@ -1939,21 +1990,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            999.999
+                                            <span class="recommend-price-logo">   999.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 535
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen4.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/40.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép lê cao cấp
@@ -1965,21 +2015,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            19.999
+                                            <span class="recommend-price-logo">   19.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 192
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen5.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/41.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         quần ngố nữ
@@ -1991,21 +2040,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            49.999
+                                            <span class="recommend-price-logo">   49.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 139
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen6.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/42.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         váy ngắn nữ tính
@@ -2017,16 +2065,14 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo">   99.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 88
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                     </div>
 
@@ -2036,6 +2082,7 @@
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen1.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/43.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                     Dép nữ
@@ -2047,21 +2094,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            59.999
+                                            <span class="recommend-price-logo">   59.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán     15
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen2.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/44.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         áo thun nam nữ
@@ -2073,21 +2119,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            199.999
+                                            <span class="recommend-price-logo">   199.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 75
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen3.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/45.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Váy bò đen phong cách châu âu
@@ -2099,21 +2144,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            99.999
+                                            <span class="recommend-price-logo">   99.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 1555
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                          
+                           <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen4.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/46.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Dép nữ 
@@ -2125,21 +2169,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            79.999
+                                            <span class="recommend-price-logo">   79.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 197
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen5.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/47.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Giày N-Y cao cấp
@@ -2151,21 +2194,20 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            499.999
+                                            <span class="recommend-price-logo">   499.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 132
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            
+                             <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                         <div class="col recommend__item">
                             <a href="" class="recommend__item-link--product">
                                 <img src="./assets/img/product2/nen6.png" alt="" class="recommend__item-bgr">
                                 <img src="./assets/img/product2/48.jfif" alt="" class="recommend__item-img">
+                            </a>
                                 <div class="recommend__item-bottom">
                                     <div class="recommend__item-text">
                                         Quần bò ngắn trắng
@@ -2177,16 +2219,14 @@
                                     </div>
                                     <div class="recommend__item-price">
                                         <div class="recommend-flash--price">
-                                            <span class="recommend-price-logo">đ</span>
-                                            69.999
+                                            <span class="recommend-price-logo">   69.999đ</span>
                                         </div>
                                         <div class="recommend__item-sell">
                                             Đã bán 90
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                           
+                            <button id="buynow" class="addToCart" >thêm vào giỏ hàng</button>
                         </div>
                     </div>
                 </div> 
@@ -2691,41 +2731,7 @@
         });
     </script>
 
-    <!-- 3 -->
-    <!-- <script>
-       $('.best__body-list').slick({
-            dots: true,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            responsive: [
-                {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-                },
-                {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-                },
-                {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-                }
-            ]
-        });
-    </script> -->
-
+    <!-- main -->
+    <script src="./assets/Js/index.js"></script>
 </body>
 </html>

@@ -529,14 +529,22 @@
 /* cart */
 .cart__container{
     width: 420px;
-    height: 300px;
     position: absolute;
     background-color: rgb(239, 224, 224);
     display: none;
     left: -204%;
     margin-top: 24px;
     animation: cart__animation ease-in 0.175s;
+    overflow-y: scroll;
 }
+
+.cart-element{
+    background-color: #f5f5f5;
+    height: auto;
+    overflow: scroll;
+}
+
+
 
 .cart__container::before{
     content: "";
@@ -559,9 +567,10 @@
     
 }
 
+
 .cart__container::after{
-    width: 90px;
-    height: 90px;
+    width: 200px;
+    height: 200px;
     background-color: transparent;
     position: absolute;
 }

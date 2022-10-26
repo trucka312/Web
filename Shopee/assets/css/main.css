@@ -361,6 +361,44 @@
 
 .header__seaching{
     flex: 1;
+    position: relative;
+}
+
+
+/* chức năng seach */
+.header__seach-history{
+    position: absolute;
+    width: 80%;
+    height: 20rem;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 3px;
+    top: 4.5rem;
+    display: none;
+    border-radius: 0.4rem;
+}
+
+.header__seach-history--item{
+    color: #000;
+    font-size: 1.4rem;
+    list-style: none;
+    line-height: 2.4rem;
+}
+
+.header__seach-history--link{
+    text-decoration: none;
+    color: #000;
+}
+
+.header__seach-input:focus ~ .header__seach-history{
+    display: block;
+}
+
+.data-item :hover{
+    cursor: pointer;
+    color: #ec593c;
+    font-weight: 500;
+    font-size: 2rem;
 }
 
 .header__seach{
@@ -418,8 +456,16 @@
 
 }
 
-/* .header__product{
-    height: 28px;
+#account{
+    display: none;
+}
+
+.header__product{
+    display: none;
+}
+
+.header__product{
+    height: 12px;
     width: auto;
 }
 
@@ -428,22 +474,22 @@
     justify-content: flex-start;
     position:absolute;
     margin: 0;
-    padding: 12px;
 }
 
 .header__product-link{
     text-decoration: none;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .header__product-item{
     display: inline-block;
-    color: blue;
+    color: #fff;
     position: relative;
     font-size: 1.2rem;
-    margin: 5px 0px 5px 13px;
+    margin-left: 5px ;
     top: 0;
-} */
+}
 
 .header__cart:hover .cart__container{
     display: block;
@@ -459,6 +505,12 @@
     left: -204%;
     margin-top: 24px;
     animation: cart__animation ease-in 0.175s;
+}
+
+.cart-element{
+    max-height: 500px;
+    background: #f5f5f5;
+    overflow-y: scroll;
 }
 
 .cart__container::before{
@@ -562,8 +614,8 @@
 }
 
 .banner__list{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
 }
 
 .banner__list-link{
@@ -1211,6 +1263,7 @@
     border-bottom: 3px solid red ;
 }
 
+
 .recommend__body{
     width: 1200px;
     margin: 10px auto;
@@ -1223,6 +1276,36 @@
 
 .recommend__body-row{
     margin-top: 10px;
+}
+
+.recommend__item:hover #buynow{
+    display: block;
+
+}
+
+#buynow{
+    display: none;
+    height: 20px;
+    width: 100%;
+    background-color: red;
+    font-size: 1.5rem;
+    color: yellow;
+    align-items: center;
+    text-align: center;
+    /* margin: 20px 0 0 0; */
+    border-radius:2px ;
+    border: none;
+}
+
+#buynow2{
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    color: red;
+    font-size: 3rem;
+    cursor: pointer;
+    margin-left: 20px;
+    transform: translateY(-60%);
 }
 
 .recommend__item{
